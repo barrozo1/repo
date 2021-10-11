@@ -53,7 +53,7 @@ if __name__ == '__main__':
 
 #### Define o construtor da classe __git()__ com seus atributos e métodos, seguindo o mesmo padrão do desafio 1, porém em OO.
 ```
-from repo.repo.desafio1 import mostrar, dividir, pega_url
+from Desafios.repo.desafio1 import mostrar, dividir, pega_url
 import requests
 
 class git:

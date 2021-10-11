@@ -1,7 +1,7 @@
 ##construindo algoritmo para ler, splitar e salvar string
 
 
-from repo.repo.desafio1 import mostrar, dividir, pega_url
+from Desafios.repo.desafio1 import mostrar, dividir, pega_url
 import requests
 
 class git:
