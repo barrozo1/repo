@@ -4,7 +4,7 @@
 
 ### Construção de algoritmo que consiga ler dados de url referentes ao user, repositório e release.
 
-#### Define a função __pega_url()__, fazendo conexão com a latest releases
+#### Define a função __pega_url()__, fazendo conexão com a latest release
 ```
 def pega_url():
     url_repo = requests.get('https://github.com/barrozo1/repo/releases/latest')
