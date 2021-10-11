@@ -4,7 +4,7 @@
 
 ### Construção de algoritmo que consiga ler dados de url referentes ao user, repositório e release.
 
-#### Define a função **dividir()**, para splitar a url.
+#### Define a função __dividir()__, para splitar a url.
 ```
 def dividir():  ##define a funcao dividir, para splitar a url
     url_repo = "https://github.com/barrozo1/repo/releases/tag/teste-v1"
@@ -12,7 +12,7 @@ def dividir():  ##define a funcao dividir, para splitar a url
     return divid
 ```
 
-#### Define a função **mostrar()**, que chama a função **dividir()** para pegar apenas o que importa.
+#### Define a função __mostrar()__, chamando a função __dividir()__ para pegar apenas o que importa.
 ```
 def mostrar():  ##chama a funcao dividir() para pegar apenas o que importa
     user = dividir()[3]
@@ -21,7 +21,7 @@ def mostrar():  ##chama a funcao dividir() para pegar apenas o que importa
     return user, repo, release
 ```
 
-#### Define a função **main()** do código.
+#### Define a função __main()__ do código.
 ```
 def main():
     print("USUÁRIO:", mostrar()[0])
