@@ -1,27 +1,30 @@
 ##construindo algoritmo para ler, splitar e salvar string
-from repo.repo.desafio1 import mostrar, dividir
 
+
+from repo.repo.desafio1 import mostrar, dividir, pega_url
+import requests
 
 class git:
-    def __init__(self, url, dividir, mostrar, printar_salvar):
-        self.url = url
+    def __init__(self, dividir, mostrar, printar_salvar, pega_url):
+        self.pega_url = pega_url
         self.dividir = dividir
         self.mostrar = mostrar
         self.printar_salvar = printar_salvar
 
 
-    def dividir(self):  ##define a funcao dividir, para splitar a url
-        url_repo = "https://github.com/barrozo1/repo/releases/tag/teste-v1"
-        divid = url_repo.split('/')
-        return divid
+    def pega_url(self):
+        url_repo = requests.get('https://github.com/barrozo1/repo/releases/latest')
+        return url_repo
 
+    def dividir(self):  ##define a funcao dividir, para splitar a url
+        divid = pega_url().url.split('/')
+        return divid
 
     def mostrar(self):  ##chama a funcao dividir() para pegar apenas o que importa
         user = dividir()[3]
         repo = dividir()[4]
         release = dividir()[7]
         return user, repo, release
-
 
     def printar_salvar(self):
         print("USUÁRIO:", mostrar()[0])

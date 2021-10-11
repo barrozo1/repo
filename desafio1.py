@@ -1,9 +1,14 @@
 ##construindo algoritmo para ler, splitar e salvar string
+import requests
+
+
+def pega_url():
+    url_repo = requests.get('https://github.com/barrozo1/repo/releases/latest')
+    return url_repo
 
 
 def dividir():  ##define a funcao dividir, para splitar a url
-    url_repo = "https://github.com/barrozo1/repo/releases/tag/teste-v1"
-    divid = url_repo.split('/')
+    divid = pega_url().url.split('/')
     return divid
 
 
